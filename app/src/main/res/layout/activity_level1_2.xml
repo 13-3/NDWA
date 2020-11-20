@@ -15,7 +15,7 @@
         android:layout_marginEnd="2dp"
         android:layout_marginBottom="336dp"
         android:fontFamily="@font/adamina"
-        android:text="068065078065"
+        android:text="068073078065"
         android:textAlignment="center"
         android:textColor="#F6F5F5"
         android:textSize="36dp"
@@ -36,17 +36,13 @@
         android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/adamina"
         android:scrollbarSize="12dp"
-        android:textColorHint="#BC9B9B"
+        android:textColor="#ffffff"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        android:id="@+id/textView2"
-        android:layout_width="240dp"
-        android:layout_height="57dp"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="437dp"</EditText>
+       </EditText>
 
     <TextView
         android:id="@+id/textView3"
@@ -97,6 +93,7 @@
         android:layout_marginBottom="249dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/adamina"
+        android:onClick="wanthelp1_2"
         android:text="?"
         android:textColor="#DC4F4F"
         android:textSize="18sp"
