@@ -4,45 +4,68 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class level2_1 extends AppCompatActivity {
-    Button help;
-    Context context;
+
+    EditText ruselt3;
+    Button Save;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level2_1);
-    help=(Button)findViewById(R.id.wanthelp2_1);
-        if(help.callOnClick()){
-        helper2_1(context);
-   }}
-    //نحتاج ميثود قبلها تستدعي الميثود هذه اذا كانت الاجابة صحيحة
-    public static void show(Context context) {
-        new AlertDialog.Builder(context)
-                .setTitle("You Are Winer Go To Next Level")
-                .setMessage("Hint :Find a word NDWA in Matrix")
-                // Specifying a listener allows you to take an action before dismissing the dialog.
-                // The dialog is automatically dismissed when a dialog button is clicked.
-                .setPositiveButton("Ok", (dialog, which) -> {
-                    dialog.dismiss();
-                })
-                // A null listener allows the button to dismiss the dialog and take no further action.
-                .setIcon(android.R.drawable.btn_star_big_on)
+
+    ruselt3 = findViewById(R.id.ruselt3);
+    Save = findViewById(R.id.Save3);
+
+
+    Save.setOnClickListener(view -> {
+
+        String temp = ruselt3.getText().toString();
+        int result3 = Integer.parseInt(temp);
+
+        if(result3 == 32144511){
+
+            AlertDialog dialog = new AlertDialog.Builder(level2_1.this)
+                    .setTitle("You Are Winner Go To Next Level")
+                    .setMessage("Matrix size numbering")
+                    .setNegativeButton("ok",null)
+                    .show();
+
+            Intent intent = new Intent(level2_1.this,level2_2.class);
+            startActivity(intent);
+
+        }
+
+        else {
+            AlertDialog dialogl = new AlertDialog.Builder(level2_1.this)
+                    .setTitle("Loser!!!")
+                    .setMessage("Try Again...")
+                    .setNegativeButton("ok",null)
+                    .show();
+        }
+
+
+    });
+
+
+   }
+
+    public void wanthelp2_1(View view) {
+
+        AlertDialog dialog = new AlertDialog.Builder(level2_1.this)
+                .setTitle("Help")
+                .setMessage("Matrix")
+                .setNegativeButton("ok", null)
                 .show();
     }
-    public static void helper2_1(Context context) {
-        new AlertDialog.Builder(context)
-                .setTitle("HELP")
-                .setMessage("Hint :MATRIX")
-                // Specifying a listener allows you to take an action before dismissing the dialog.
-                // The dialog is automatically dismissed when a dialog button is clicked.
-                .setPositiveButton("Ok", (dialog, which) -> {
-                    dialog.dismiss();
-                })
-                // A null listener allows the button to dismiss the dialog and take no further action.
-                .setIcon(android.R.drawable.ic_lock_idle_lock)
-                .show();
-    }
+
+
+
+
 }
+

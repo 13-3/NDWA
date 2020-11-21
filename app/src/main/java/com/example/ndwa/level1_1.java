@@ -30,15 +30,15 @@ public class level1_1 extends AppCompatActivity {
 
             AlertDialog dialog = new AlertDialog.Builder(level1_1.this)
                     .setTitle("Help")
-                    .setMessage("Hint: One of computers filed")
+                    .setMessage("One of computers filed")
                     .setNegativeButton("ok",null)
                     .show();
         }
 
 
         public void Save2(View view){
-           String result = ruselt.getText().toString();
-            if(result == "info security"){
+           String result = ruselt.getText().toString().toLowerCase();
+            if(result.equals("info security") || result.equals("information security")){
 
                 AlertDialog dialog = new AlertDialog.Builder(level1_1.this)
                         .setTitle("You Are Winner Go To Next Level")
