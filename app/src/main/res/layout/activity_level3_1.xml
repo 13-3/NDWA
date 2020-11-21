@@ -7,6 +7,22 @@
     tools:context=".level3_1"
     android:background="@color/black">
 
+    <TextView
+        android:id="@+id/tvCipher"
+        android:layout_width="245dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="132dp"
+        android:hint="Chipher Text"
+        android:textColor="#ffffff"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Save6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Save6" />
+
     <ImageView
         android:layout_width="395dp"
         android:layout_height="234dp"
@@ -35,10 +51,10 @@
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.949" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/ruselt5"
@@ -51,7 +67,7 @@
         android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/adamina"
         android:scrollbarSize="12dp"
-        android:inputType="number"
+        android:inputType="PlainText"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
