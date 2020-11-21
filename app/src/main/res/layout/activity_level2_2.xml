@@ -7,13 +7,29 @@
     tools:context=".level2_2"
     android:background="@color/black">
 
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="406dp"
+        android:layout_height="202dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/matrix"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308">
+
+    </ImageView>
+
     <TextView
         android:layout_width="407dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="198dp"
         android:layout_marginEnd="2dp"
-        android:layout_marginBottom="336dp"
         android:fontFamily="@font/adamina"
         android:text="4515141114"
         android:textAlignment="center"
@@ -22,8 +38,10 @@
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.568" />
 
     <EditText
         android:id="@+id/ruselt4"
@@ -33,10 +51,9 @@
         android:layout_marginTop="440dp"
         android:layout_marginEnd="85dp"
         android:layout_marginBottom="239dp"
-        android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/adamina"
         android:scrollbarSize="12dp"
-        android:textColorHint="#BC9B9B"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,6 +114,7 @@
         android:layout_marginBottom="249dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/adamina"
+        android:onClick="wanthelp2_2"
         android:text="?"
         android:textColor="#DC4F4F"
         android:textSize="18sp"
