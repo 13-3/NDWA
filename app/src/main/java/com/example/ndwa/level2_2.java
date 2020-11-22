@@ -30,7 +30,7 @@ public class level2_2 extends AppCompatActivity {
             {
                 AlertDialog dialog = new AlertDialog.Builder(level2_2.this)
                         .setTitle("You Are Winner Go To Next Level")
-                        .setMessage("ASCII Code TO TEXT Result is :DINA") // change hint
+                        .setMessage("Matrix size") // change hint
                         .setNegativeButton("ok",null)
                         .show();
 

@@ -11,17 +11,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 public class level1_1 extends AppCompatActivity {
-   // Button help;
-    //Context context;
+
     EditText ruselt;
     Button Save2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1_1);
-     /*   help=(Button)findViewById(R.id.wanthelp1_1);
-           if(help.callOnClick()){
-               helper(context);*/
+
             ruselt = findViewById(R.id.ruselt1);
             Save2 = findViewById(R.id.Save2);
 

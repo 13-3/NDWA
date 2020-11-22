@@ -9,82 +9,50 @@
 
     <TextView
         android:id="@+id/tvCipher"
-        android:layout_width="245dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="156dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="124dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="13dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginBottom="292dp"
         android:hint="Chipher Text"
         android:textColor="#ffffff"
         android:textColorHint="#FFFFFF"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Save6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Save6" />
-
-    <ImageView
-        android:layout_width="395dp"
-        android:layout_height="234dp"
-        android:background="@drawable/matrix2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313">
-
-    </ImageView>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="407dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="198dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="336dp"
-        android:fontFamily="@font/adamina"
-        android:text="NORAH"
-        android:textAlignment="center"
-        android:textColor="#F6F5F5"
-        android:textSize="36dp"
-        android:textStyle="normal|bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/ruselt5"
         android:layout_width="242dp"
         android:layout_height="52dp"
         android:layout_marginStart="84dp"
-        android:layout_marginTop="440dp"
         android:layout_marginEnd="85dp"
-        android:layout_marginBottom="239dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/adamina"
-        android:scrollbarSize="12dp"
         android:inputType="text"
+        android:scrollbarSize="12dp"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </EditText>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328"></EditText>
+
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="220dp"
-        android:layout_height="35dp"
+        android:layout_width="403dp"
+        android:layout_height="39dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="128dp"
         android:layout_marginEnd="189dp"
         android:layout_marginBottom="568dp"
         android:fontFamily="@font/adamina"
-        android:text="Write The Word :"
+        android:text="Encrypt your name :"
         android:textAlignment="inherit"
         android:textColor="#DC4F4F"
         android:textColorHint="#FAFAFA"
@@ -102,9 +70,7 @@
         android:layout_width="100dp"
         android:layout_height="46dp"
         android:layout_marginStart="309dp"
-        android:layout_marginTop="505dp"
         android:layout_marginEnd="2dp"
-        android:layout_marginBottom="180dp"
         android:backgroundTint="@color/white"
         android:clickable="true"
         android:text="Save"
@@ -113,6 +79,7 @@
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -121,18 +88,39 @@
         android:layout_width="53dp"
         android:layout_height="42dp"
         android:layout_marginStart="274dp"
-        android:layout_marginTop="440dp"
         android:layout_marginEnd="84dp"
-        android:layout_marginBottom="249dp"
         android:backgroundTint="@color/white"
         android:fontFamily="@font/adamina"
+        android:onClick="wanthelp3_1"
         android:text="?"
         android:textColor="#DC4F4F"
         android:textSize="18sp"
         android:textStyle="normal|bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.301" />
+
+    <Button
+        android:id="@+id/Next1"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="305dp"
+        android:layout_marginEnd="6dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:text="Next"
+        android:textColor="#DC4F4F"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.684" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,5 @@
 package com.example.ndwa;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,10 +10,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class level3_1 extends AppCompatActivity {
 
     Button Save5;
-    EditText ruselt4;
+    Button Next1;
 
     EditText ruselt5;
     TextView tvCipher;
@@ -24,75 +25,74 @@ public class level3_1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level3_1);
 
-        ruselt5=findViewById(R.id.ruselt5);
-        tvCipher= findViewById(R.id.tvCipher);
+        ruselt5 = findViewById(R.id.ruselt5);
+        tvCipher = findViewById(R.id.tvCipher);
+        Next1 = findViewById(R.id.Next1);
 
 
-        Save5=findViewById(R.id.Save5);
+        Save5 = findViewById(R.id.Save5);
 
         Save5.setOnClickListener(view -> {
 
             String userinput = ruselt5.getText().toString();
-            encryption(userinput);
+            tvCipher.setText(encryption(userinput));
 
         });
 
-
-    }
-
-
-    public void encryption(String plainText){
-
-        char [] alphabet2={ 'A','G','M','S','Y','4',
-                'B','H','N','T','Z','5',
-                'C','I','O','U','0','6',
-                'D','J','P','V','1','7',
-                'E','K','Q','W','2','8',
-                'F','L','R','X','3','9'};
-
-        //if a,h,o,v,2 or 9 do nothing
-        //index 0,7,14,21,28,35
-
-        char [] cipherText = plainText.toUpperCase().toCharArray();
-
-         for (char c : cipherText)
-         {
-             c +=2;
-             tvCipher.setText(c);
-         }
-
-
-    }
-
-}
-/*  ruselt4 = findViewById(R.id.ruselt4);
-        Save = findViewById(R.id.Save4);
-
-        Save.setOnClickListener(view -> {
-
-            String temp = ruselt4.getText().toString();
-            long result4 = Long.parseLong(temp);
-
-            if (result4 == 3536272832L )
-            {
-                AlertDialog dialog = new AlertDialog.Builder(level3_1.this)
-                        .setTitle("You Are Winner Go To Next Level")
-                        .setMessage("Sudoku")
-                        .setNegativeButton("ok",null)
-                        .show();
-
-                Intent intent = new Intent(level3_1.this,level3_2.class);
+        Next1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(level3_1.this, level3_2.class);
                 startActivity(intent);
+            }
+        });
 
+    }
+
+    public String encryption(String PlainText) {
+
+        char[] alphabet2 = {
+
+                'A', 'G', 'M', 'S', 'Y', '4',
+                'B', 'H', 'N', 'T', 'Z', '5',
+                'C', 'I', 'O', 'U', '0', '6',
+                'D', 'J', 'P', 'V', '1', '7',
+                'E', 'K', 'Q', 'W', '2', '8',
+                'F', 'L', 'R', 'X', '3', '9'
+        };
+
+        char[] chars = PlainText.toUpperCase().toCharArray();
+
+        String temp = "";
+
+        ArrayList<String> array = new ArrayList<>();
+
+
+        for (int i = 0; i < chars.length; i++) {
+            for (int j = 0; j < alphabet2.length; j++) {
+                if (chars[i] == alphabet2[j]) {
+                    temp = temp + alphabet2[j + 2];
+                }
 
             }
+        }
+        array.add(temp);
+        String result = "";
+        for (String s : array) {
+            result += s;
+        }
+        return result;
+    }
 
-            else {
-                AlertDialog dialogl = new AlertDialog.Builder(level3_1.this)
-                        .setTitle("Loser!!!")
-                        .setMessage("Try Again...")
-                        .setNegativeButton("ok",null)
-                        .show();
-            }
 
-        });*/
+    public void wanthelp3_1(View view) {
+
+        AlertDialog dialog = new AlertDialog.Builder(level3_1.this)
+                .setTitle("Help")
+                .setMessage("Encrypt your name using NDWA encryption")
+                .setNegativeButton("ok", null)
+                .show();
+    }
+}
+
+
