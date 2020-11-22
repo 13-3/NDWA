@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class level3_1 extends AppCompatActivity {
 
     Button Save5;
-    EditText ruselt4;
+
 
     EditText ruselt5;
     TextView tvCipher;
@@ -32,9 +32,9 @@ public class level3_1 extends AppCompatActivity {
 
         Save5.setOnClickListener(view -> {
 
-            String userinput = ruselt5.getText().toString();
-            encryption(userinput);
-            tvCipher.setText(userinput);
+            String userinput = ruselt5.getText().toString().trim().toUpperCase();
+
+            tvCipher.setText(encryption(userinput));
 
         });
 
@@ -42,43 +42,25 @@ public class level3_1 extends AppCompatActivity {
     }
 
 
-    public String encryption(String PlainText){
+    public char encryption(String plainText) {
 
-        char [] alphabet2={ 'A','G','M','S','Y','4',
-                'B','H','N','T','Z','5',
-                'C','I','O','U','0','6',
-                'D','J','P','V','1','7',
-                'E','K','Q','W','2','8',
-                'F','L','R','X','3','9'};
+        char[][] alphabet2 = {
+                {'A', 'G', 'M', 'S', 'Y', '4'},
+                {'B', 'H', 'N', 'T', 'Z', '5'},
+                {'C', 'I', 'O', 'U', '0', '6'},
+                {'D', 'J', 'P', 'V', '1', '7'},
+                {'E', 'K', 'Q', 'W', '2', '8'},
+                {'F', 'L', 'R', 'X', '3', '9'}
+        };
 
         //if a,h,o,v,2 or 9 do nothing
         //index 0,7,14,21,28,35
+        char [] cipherText = plainText.toCharArray();
 
-        String Cipher= " ";
-        for(int i=0; i<PlainText.length(); i++){
 
-            for(int j=0; j<alphabet2.length; j++){
 
-                if(Character.isWhitespace(PlainText.toUpperCase().charAt(i))){
-                    Cipher += " ";
-                    break;
-                }else if(PlainText.toUpperCase().charAt(i)== alphabet2[0] ||
-                        PlainText.toUpperCase().charAt(i)== alphabet2[7] ||
-                        PlainText.toUpperCase().charAt(i)== alphabet2[14] ||
-                        PlainText.toUpperCase().charAt(i)== alphabet2[21] ||
-                        PlainText.toUpperCase().charAt(i)== alphabet2[28] ||
-                        PlainText.toUpperCase().charAt(i)== alphabet2[35] ){
 
-                    Cipher += alphabet2[j];
-
-                }else{
-
-                    Cipher += alphabet2[j+2];
-                }
-
-            }
-        }
-        return Cipher;
+        return  ' ';
     }
 
 }
