@@ -11,10 +11,10 @@
         android:id="@+id/tvCipher"
         android:layout_width="245dp"
         android:layout_height="61dp"
-        android:layout_marginStart="85dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="13dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="348dp"
         android:hint="Chipher Text"
         android:textColor="#ffffff"
         android:textColorHint="#FFFFFF"
@@ -22,39 +22,6 @@
         app:layout_constraintEnd_toStartOf="@+id/Save6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Save6" />
-
-    <ImageView
-        android:layout_width="395dp"
-        android:layout_height="234dp"
-        android:background="@drawable/matrix2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313">
-
-    </ImageView>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="407dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="198dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginBottom="336dp"
-        android:fontFamily="@font/adamina"
-        android:text="NORAH"
-        android:textAlignment="center"
-        android:textColor="#F6F5F5"
-        android:textSize="36dp"
-        android:textStyle="normal|bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/ruselt5"
@@ -67,7 +34,7 @@
         android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/adamina"
         android:scrollbarSize="12dp"
-        android:inputType="PlainText"
+      android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
