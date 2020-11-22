@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class level3_1 extends AppCompatActivity {
 
     Button Save5;
-
+    EditText ruselt4;
 
     EditText ruselt5;
     TextView tvCipher;
@@ -32,9 +32,8 @@ public class level3_1 extends AppCompatActivity {
 
         Save5.setOnClickListener(view -> {
 
-            String userinput = ruselt5.getText().toString().trim().toUpperCase();
-
-            tvCipher.setText(encryption(userinput));
+            String userinput = ruselt5.getText().toString();
+            encryption(userinput);
 
         });
 
@@ -42,25 +41,27 @@ public class level3_1 extends AppCompatActivity {
     }
 
 
-    public char encryption(String plainText) {
+    public void encryption(String plainText){
 
-        char[][] alphabet2 = {
-                {'A', 'G', 'M', 'S', 'Y', '4'},
-                {'B', 'H', 'N', 'T', 'Z', '5'},
-                {'C', 'I', 'O', 'U', '0', '6'},
-                {'D', 'J', 'P', 'V', '1', '7'},
-                {'E', 'K', 'Q', 'W', '2', '8'},
-                {'F', 'L', 'R', 'X', '3', '9'}
-        };
+        char [] alphabet2={ 'A','G','M','S','Y','4',
+                'B','H','N','T','Z','5',
+                'C','I','O','U','0','6',
+                'D','J','P','V','1','7',
+                'E','K','Q','W','2','8',
+                'F','L','R','X','3','9'};
 
         //if a,h,o,v,2 or 9 do nothing
         //index 0,7,14,21,28,35
-        char [] cipherText = plainText.toCharArray();
+
+        char [] cipherText = plainText.toUpperCase().toCharArray();
+
+         for (char c : cipherText)
+         {
+             c +=2;
+             tvCipher.setText(c);
+         }
 
 
-
-
-        return  ' ';
     }
 
 }
